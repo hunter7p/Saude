@@ -1,0 +1,41 @@
+<script>
+//esta função pula linha.
+function PL () {
+    document.write("<br>");
+}
+//esta função constroi uma frase.
+function mostra (frase) {
+    PL ();
+    document.write(frase);
+    PL ();
+}
+
+function Calcularimc(altura, peso){
+
+    var imc = peso / (altura * altura);    
+    return imc
+    //mostra ("IMC CALCULADO É " + imc);
+
+}
+    
+var nome = prompt("Olá qual é o seu nome?");
+document.write("Bem vindo, " + nome);
+
+var idade = prompt(nome + ", Qual a sua idade?");
+document.write( "<br>" + "Idade: " + idade + "anos");
+
+    var peso = prompt(nome + " Quanto você pesa?");
+    var altura = prompt(" e quanto você tem de altura " + nome + " ?");
+
+    var imc = Calcularimc(altura, peso);
+mostra ("o Seu IMC " + nome + " é: "  + Math.round(imc));
+mostra(" esta a: " + Math.round(imc -18.5) + "pontos acima do limite de magreza.");
+mostra("voce esta a: " + Math.round(imc -35) + "pontos abaixo do limite de obesidade.")
+
+var dias = idade * 265;
+mostra("Você já viveu: " + dias + "dias de vida");
+var batimentos = dias * 24 *60 * 80;
+mostra("Seu coração já bateu aproximadamente: " +batimentos + " vezes. Haja coração!");
+
+
+</script>
